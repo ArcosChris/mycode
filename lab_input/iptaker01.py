@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-"""Alta3 Research | RZFeeser
-   print() - display data to std out"""
+"""
+Alta3 Research | CARCOS
+print() - display data to std out
+"""
 
 # below is a function containing our code
 def main():
