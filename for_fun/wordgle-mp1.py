@@ -114,12 +114,12 @@ def start_game():
                 break
             
             else:
-                if len(matches) > 0:
-                    print(f"\n*Woohoo you got {len(matches)} correct!*\n")
-                elif curr_attempt == 6:
+                if curr_attempt == 6:
                     print("\n___________________________________________________________")
                     print(f"*Well you tried but failed! The word was {rand_word.upper()}")
                     print("_____________________________________________________________")
+                elif len(matches) > 0:
+                    print(f"\n*Woohoo you got {len(matches)} correct!*\n")
                 else: 
                     print(f"\n*Unfortunately, you're no good at this.*\n")
 
