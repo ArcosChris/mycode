@@ -1,0 +1,7 @@
+This is a simple text file
+the goal here is to practice reading lines
+of text from a file. 
+1. Hello 
+2. World
+3. I'm 
+4. Chris
