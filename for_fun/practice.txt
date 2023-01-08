@@ -1,0 +1,7 @@
+This is just a text file
+The goal of this is to practice reading lines
+in a file using python
+
+1. Hello
+2. World
+3. My name is Chris
