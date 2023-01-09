@@ -37,13 +37,28 @@ class Mulligan_Cheater(Player):
 
 class Additional_Die_Cheater(Player):
     def cheat(self):
+       self.dice.append(randint(1,6))
+
+class Weighted_Dice_Player(Player):
+    def cheat(self):
         counter = 0
         for i in self.dice:
             if i < 3:
                 self.dice[counter] = randint(3,6)
-        counter += 1
+
+            counter += 1
 
 class Sabotage_Player(Player):
     def cheat(self, other):
-        for i in range(other.dice):
-            other.dice[i] = randint(1,3)
+        counter = 0
+        for i in other.dice:
+            if i > 3:
+                other.dice[counter] = randint(1,3)
+
+            counter += 1
+
+class Steal_All_Player(Player):
+    def cheat(self, other):
+        for i in other.dice:
+            self.dice.append(i)
+        other.dice = []

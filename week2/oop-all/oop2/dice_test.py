@@ -3,20 +3,18 @@
 Testing simple dice game
 """
 
-from cheatdice import Player
-from cheatdice import Cheat_Swapper
-from cheatdice import Cheat_Loaded_Dice
+from cheatdice import *
 
 def main():
     """run time code"""
-    cheater1 = Cheat_Swapper()
-    cheater2 = Cheat_Loaded_Dice()
+    cheater1 = Steal_All_Player()
+    cheater2 = Sabotage_Player()
 
     cheater1.roll()
     cheater2.roll()
 
-    cheater1.cheat()
-    cheater2.cheat()
+    cheater1.cheat(cheater2)
+    cheater2.cheat(cheater1)
 
     print(f"Cheater 1 rolled {cheater1.get_dice()}")
     print(f"Cheater 2 rolled {cheater2.get_dice()}")
