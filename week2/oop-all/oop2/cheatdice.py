@@ -28,3 +28,22 @@ class Cheat_Loaded_Dice(Player):
             if self.dice[i] < 6:
                 self.dice[i] += 1
             i += 1 
+
+class Mulligan_Cheater(Player):
+    def cheat(self):
+        if sum(self.get_dice()) < 9: 
+            self.dice = []
+            self.roll() 
+
+class Additional_Die_Cheater(Player):
+    def cheat(self):
+        counter = 0
+        for i in self.dice:
+            if i < 3:
+                self.dice[counter] = randint(3,6)
+        counter += 1
+
+class Sabotage_Player(Player):
+    def cheat(self, other):
+        for i in range(other.dice):
+            other.dice[i] = randint(1,3)
