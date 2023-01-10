@@ -1,0 +1,7 @@
+- apps:
+  - htop
+  - sshd
+  - iptables
+  - minecraft
+  hosts: all
+  name: Alta3 Research
